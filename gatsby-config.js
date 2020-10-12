@@ -5,7 +5,8 @@ module.exports = {
     description: `Personal portfolio site`,
     siteUrl: `https://www.stephenbradshaw.dev`,
     social: {
-      twitter: ``,
+      github: `stephenjbradshaw`,
+      linkedin: `stephenbradshawdev`,
     },
   },
   plugins: [
@@ -113,14 +114,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Stephen Bradshaw`,
+        short_name: `SB`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffcf56`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/logo.png`,
       },
     },
     {
