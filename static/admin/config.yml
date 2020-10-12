@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: stephenjbradshaw/portfolio-site
+  branch: main
 
 media_folder: content/assets
 public_folder: ../assets
