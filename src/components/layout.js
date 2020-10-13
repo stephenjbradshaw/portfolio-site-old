@@ -4,12 +4,6 @@ import styled from "styled-components"
 
 import { rhythm } from "../utils/typography"
 
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
-
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`
@@ -23,42 +17,33 @@ export default function Layout({ children }) {
     `
   )
 
-  const header = (
-    <>
-      <Link
-        style={{
-          boxShadow: `none`,
-          textDecoration: `none`,
-          color: `inherit`,
-        }}
-        to={`/`}
-      >
-        <h1 style={{ display: `inline` }}>{data.site.siteMetadata.title} </h1>
-      </Link>
-
-      <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/projects/">Projects</ListLink>
-        <ListLink to="/blog/">Blog</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
-      </ul>
-      </>
-  )
-
   return (
     <Wrapper>
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(30),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-      </div>
+      <Header>
+        <Title to={`/`}>
+          <h1>{data.site.siteMetadata.title}</h1>
+        </Title>
+        <Nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about/">About</Link>
+            </li>
+            <li>
+              <Link to="/projects/">Projects</Link>
+            </li>
+            <li>
+              <Link to="/blog/">Blog</Link>
+            </li>
+            <li>
+              <Link to="/contact/">Contact</Link>
+            </li>
+          </ul>
+        </Nav>
+      </Header>
+      <main>{children}</main>
       <Footer>
         <p>© Built by Stephen Bradshaw, {new Date().getFullYear()}</p>
         <p>
@@ -73,10 +58,31 @@ export default function Layout({ children }) {
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
 `
 
 const Footer = styled.footer`
   text-align: center;
-  margin: 24px;
+`
+
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #ffcf56;
+`
+
+const Nav = styled.nav`
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+`
+
+const Title = styled(Link)`
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
 `
