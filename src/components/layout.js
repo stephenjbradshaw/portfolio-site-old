@@ -1,34 +1,54 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import styled from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
+import "typeface-roboto"
 
-const Wrapper = styled.div``
+const GlobalStyle = createGlobalStyle`
+body {
+  --orange: #ffcf56;
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
+  font-weight: 300;
+  font-size: 16px;
+}
 
-const Footer = styled.footer`
-  text-align: center;
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
 `
 
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
   text-align: center;
-  background-color: #ffcf56;
-`
-
-const Nav = styled.nav`
-  ul {
-    list-style: none;
-  }
-  li {
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
+  background-color: var(--orange);
 `
 
 const Title = styled(Link)`
   box-shadow: none;
   text-decoration: none;
   color: inherit;
+`
+
+const Nav = styled.nav`
+  li {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+`
+
+const Main = styled.main`
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+`
+
+const Footer = styled.footer`
+  text-align: center;
 `
 
 export default function Layout({ children }) {
@@ -45,7 +65,8 @@ export default function Layout({ children }) {
   )
 
   return (
-    <Wrapper>
+    <>
+      <GlobalStyle />
       <Header>
         <Title to={`/`}>
           <h1>{data.site.siteMetadata.title}</h1>
@@ -70,7 +91,7 @@ export default function Layout({ children }) {
           </ul>
         </Nav>
       </Header>
-      <main>{children}</main>
+      <Main>{children}</Main>
       <Footer>
         <p>© Built by Stephen Bradshaw, {new Date().getFullYear()}</p>
         <p>
@@ -80,6 +101,6 @@ export default function Layout({ children }) {
           </a>
         </p>
       </Footer>
-    </Wrapper>
+    </>
   )
 }
