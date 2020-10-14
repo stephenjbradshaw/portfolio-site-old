@@ -5,8 +5,6 @@ import SEO from "../components/seo"
 import Button from "../components/button"
 import AllPosts from "../components/all-blog-posts"
 
-import { rhythm } from "../utils/typography"
-
 export default function Blog({ data }) {
   const posts = data.allMdx.edges
 

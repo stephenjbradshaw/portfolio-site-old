@@ -1,21 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import { rhythm } from "../utils/typography"
+import styled from "styled-components"
 
 export default function AllPosts({ posts }) {
-  
   return (
-    <div style={{ margin: "20px 0 40px" }}>
+    <PostsList>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <div key={node.fields.slug}>
-            <h3
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
+          <li key={node.fields.slug}>
+            <h3>
               <Link
                 style={{ boxShadow: `none` }}
                 to={`/blog${node.fields.slug}`}
@@ -29,9 +23,15 @@ export default function AllPosts({ posts }) {
                 __html: node.frontmatter.description || node.excerpt,
               }}
             />
-          </div>
+          </li>
         )
       })}
-    </div>
+    </PostsList>
   )
 }
+
+const PostsList = styled.ul`
+  margin: 20px 0px 40px;
+  list-style-type: none;
+`
+

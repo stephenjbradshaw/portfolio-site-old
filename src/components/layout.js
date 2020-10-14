@@ -2,8 +2,6 @@ import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import styled from "styled-components"
 
-import { rhythm } from "../utils/typography"
-
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`

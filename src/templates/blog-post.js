@@ -5,7 +5,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
 
 export default function BlogPostTemplate({ data, pageContext }) {
   const post = data.mdx
@@ -20,10 +19,9 @@ export default function BlogPostTemplate({ data, pageContext }) {
       <h1>{post.frontmatter.title}</h1>
       <p
         style={{
-          ...scale(-1 / 5),
           display: `block`,
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
+          marginBottom: `20px`,
+          marginTop: `20px`,
         }}
       >
         {post.frontmatter.date}
@@ -31,7 +29,7 @@ export default function BlogPostTemplate({ data, pageContext }) {
       <MDXRenderer>{post.body}</MDXRenderer>
       <hr
         style={{
-          marginBottom: rhythm(1),
+          marginBottom: `20px`,
         }}
       />
       <Bio />
