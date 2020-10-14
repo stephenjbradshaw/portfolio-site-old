@@ -5,11 +5,13 @@ import "typeface-roboto"
 
 const GlobalStyle = createGlobalStyle`
 body {
-  --orange: #ffcf56;
+   --orange: #ffcf56;
+   --dark-grey: #303030;
   margin: 0;
   font-family: "Roboto", "sans-serif";
   font-weight: 300;
   font-size: 16px;
+  color: var(--dark-grey)
 }
 
 ul {
@@ -19,25 +21,44 @@ ul {
 li {
   list-style: none;
 }
+
+a {
+  color: inherit;
+}
 `
 
 const Header = styled.header`
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 5rem;
   background-color: var(--orange);
+  padding-left: 1rem;
+  padding-right: 1rem;
 `
 
 const Title = styled(Link)`
+  align-self: center;
   box-shadow: none;
   text-decoration: none;
-  color: inherit;
+
+  h1 {
+    font-size: 12pt;
+  }
 `
 
 const Nav = styled.nav`
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  align-self: center;
+
   li {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     display: inline-block;
-    margin-right: 0.5rem;
+  }
+
+  a {
+    text-decoration: none;
   }
 `
 
