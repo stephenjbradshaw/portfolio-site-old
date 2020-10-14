@@ -1,10 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-const Button = props => (
-  <ButtonWrapper props={props}>{props.children}</ButtonWrapper>
-)
-
 const ButtonWrapper = styled.button`
   display: block;
   border: none;
@@ -28,5 +24,9 @@ const ButtonWrapper = styled.button`
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
   }
 `
+
+const Button = props => (
+  <ButtonWrapper props={props}>{props.children}</ButtonWrapper>
+)
 
 export default Button

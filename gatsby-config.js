@@ -62,13 +62,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Stephen Bradshaw`,
@@ -77,14 +70,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffcf56`,
         display: `minimal-ui`,
-        // edit below
         icon: `content/assets/logo.png`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
       },
     },
   ],
