@@ -2,6 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+const PostsList = styled.ul`
+  margin: 20px 0px 40px;
+  list-style-type: none;
+`
+
 export default function AllPosts({ posts }) {
   return (
     <PostsList>
@@ -29,9 +34,4 @@ export default function AllPosts({ posts }) {
     </PostsList>
   )
 }
-
-const PostsList = styled.ul`
-  margin: 20px 0px 40px;
-  list-style-type: none;
-`
 

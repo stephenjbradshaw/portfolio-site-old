@@ -2,6 +2,35 @@ import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import styled from "styled-components"
 
+const Wrapper = styled.div``
+
+const Footer = styled.footer`
+  text-align: center;
+`
+
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #ffcf56;
+`
+
+const Nav = styled.nav`
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+`
+
+const Title = styled(Link)`
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+`
+
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`
@@ -54,33 +83,3 @@ export default function Layout({ children }) {
     </Wrapper>
   )
 }
-
-const Wrapper = styled.div`
-`
-
-const Footer = styled.footer`
-  text-align: center;
-`
-
-const Header = styled.header`
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  background-color: #ffcf56;
-`
-
-const Nav = styled.nav`
-  ul {
-    list-style: none;
-  }
-  li {
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
-`
-
-const Title = styled(Link)`
-  box-shadow: none;
-  text-decoration: none;
-  color: inherit;
-`
