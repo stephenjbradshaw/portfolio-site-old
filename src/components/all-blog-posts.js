@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Image from "gatsby-image"
 import styled from "styled-components"
 
 const PostsList = styled.ul`
@@ -12,15 +13,14 @@ export default function AllPosts({ posts }) {
     <PostsList>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
+        const featuredImage = node.frontmatter.featuredImage
+        console.dir(node)
+
         return (
           <li key={node.fields.slug}>
+            {featuredImage && <Image fluid={featuredImage.childImageSharp.fluid} />}
             <h3>
-              <Link
-                style={{ boxShadow: `none` }}
-                to={`/blog${node.fields.slug}`}
-              >
-                {title}
-              </Link>
+              <Link to={`/blog${node.fields.slug}`}>{title}</Link>
             </h3>
             <small>{node.frontmatter.date}</small>
             <p
@@ -34,4 +34,3 @@ export default function AllPosts({ posts }) {
     </PostsList>
   )
 }
-
