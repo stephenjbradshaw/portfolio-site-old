@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
 import "typeface-roboto"
+import { FaBars, FaTimes } from "react-icons/fa"
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -27,34 +28,67 @@ a {
 }
 `
 
-const Header = styled.header`
+const Nav = styled.nav`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 5rem;
+  grid-template-rows: 4rem 1fr;
+  padding: 0.5rem 1rem;
+
   background-color: var(--orange);
-  padding-left: 1rem;
-  padding-right: 1rem;
 `
 
 const Title = styled(Link)`
+  grid-column: 1 / span 1;
   align-self: center;
+
   box-shadow: none;
   text-decoration: none;
 
   h1 {
+    margin: 0;
     font-size: 12pt;
   }
 `
 
-const Nav = styled.nav`
-  grid-column-start: 2;
-  grid-column-end: span 2;
+const BurgerButton = styled.button`
+  grid-column: 3 / span 1;
+  justify-self: end;
   align-self: center;
+  height: 20px;
+  width: 20px;
+  padding: 0;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  svg {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    outline: none;
+  }
+
+  span {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+`
+
+const Ul = styled.ul`
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+  display: ${props => (props.open ? "flex" : "none")};
+  margin: 0;
+
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
 
   li {
-    padding-left: 0.3rem;
-    padding-right: 0.3rem;
-    display: inline-block;
+    transition: 0.5s;
   }
 
   a {
@@ -73,6 +107,8 @@ const Footer = styled.footer`
 `
 
 export default function Layout({ children }) {
+  const [navIsOpen, setNavOpen] = useState(false)
+
   const data = useStaticQuery(
     graphql`
       query {
@@ -88,12 +124,24 @@ export default function Layout({ children }) {
   return (
     <>
       <GlobalStyle />
-      <Header>
-        <Title to={`/`}>
-          <h1>{data.site.siteMetadata.title}</h1>
-        </Title>
-        <Nav>
-          <ul>
+      <header>
+        <Nav open={navIsOpen}>
+          <Title to={`/`}>
+            <h1>{data.site.siteMetadata.title}</h1>
+          </Title>
+          <BurgerButton
+            onClick={() => {
+              setNavOpen(!navIsOpen)
+            }}
+          >
+            {navIsOpen ? (
+              <FaTimes aria-hidden="true" tabIndex="-1" />
+            ) : (
+              <FaBars aria-hidden="true" tabIndex="-1" />
+            )}
+            <span>Click to open menu</span>
+          </BurgerButton>
+          <Ul open={navIsOpen}>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -109,9 +157,9 @@ export default function Layout({ children }) {
             <li>
               <Link to="/contact/">Contact</Link>
             </li>
-          </ul>
+          </Ul>
         </Nav>
-      </Header>
+      </header>
       <Main>{children}</Main>
       <Footer>
         <p>© Built by Stephen Bradshaw, {new Date().getFullYear()}</p>
