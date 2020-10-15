@@ -3,7 +3,8 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 import { FaBars, FaTimes } from "react-icons/fa"
 import "typeface-roboto"
 import { ThemeProvider } from "styled-components"
-import { lightTheme, darkTheme, GlobalStyle } from "../styles/global.styles"
+import { GlobalStyle } from "../styles/global.styles"
+import { lightTheme, darkTheme } from "../styles/theme.styles"
 import {
   Nav,
   Title,
@@ -11,11 +12,13 @@ import {
   Ul,
   Main,
   Footer,
+  StyledThemeButton,
 } from "../styles/layout.styles"
 
 export default function Layout({ children }) {
-  const [navIsOpen, setNavOpen] = useState(false)
-  
+  const [navIsOpen, setNavIsOpen] = useState(false)
+  const [themeIsLight, setThemeIsLight] = useState(true)
+
   const data = useStaticQuery(
     graphql`
       query {
@@ -29,16 +32,20 @@ export default function Layout({ children }) {
   )
 
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={themeIsLight ? lightTheme : darkTheme}>
       <GlobalStyle />
       <header>
         <Nav open={navIsOpen}>
           <Title to={`/`}>
             <h1>{data.site.siteMetadata.title}</h1>
           </Title>
+          <StyledThemeButton
+            themeIsLight={themeIsLight}
+            setThemeIsLight={setThemeIsLight}
+          />
           <BurgerButton
             onClick={() => {
-              setNavOpen(!navIsOpen)
+              setNavIsOpen(!navIsOpen)
             }}
           >
             {navIsOpen ? (

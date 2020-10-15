@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import ThemeButton from "../components/theme-button"
 
 export const Nav = styled.nav`
   display: grid;
   padding: 0.5rem 1rem;
-  background-color: ${props => props.theme.bgOrange};
+  background-color: ${props => props.theme.navBackground};
 
   @media only screen and (max-width: 599px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -18,7 +19,7 @@ export const Nav = styled.nav`
 `
 
 export const Title = styled(Link)`
-  grid-column: 1 / span 1;
+  grid-column: 1;
   align-self: center;
 
   box-shadow: none;
@@ -33,6 +34,7 @@ export const Title = styled(Link)`
 export const BurgerButton = styled.button`
   @media only screen and (max-width: 599px) {
     grid-column: 3;
+    grid-row: 1;
     justify-self: end;
     align-self: center;
     height: 20px;
@@ -64,14 +66,10 @@ export const BurgerButton = styled.button`
 `
 
 export const Ul = styled.ul`
-  a {
-    text-decoration: none;
-  }
-
   @media only screen and (max-width: 599px) {
+    display: ${props => (props.open ? "flex" : "none")};
     grid-column: 3;
     grid-row: 2;
-    display: ${props => (props.open ? "flex" : "none")};
     margin: 0;
 
     flex-direction: column;
@@ -84,6 +82,50 @@ export const Ul = styled.ul`
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`
+
+export const StyledThemeButton = styled(ThemeButton)`
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+
+  width: 40px;
+  height: 25px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: ${({ theme }) => theme.themeToggle};
+  border: none;
+  cursor: pointer;
+
+  @media only screen and (max-width: 599px) {
+    margin-right: 2rem;
+  }
+
+  svg {
+    width: 70%;
+    height: 70%;
+    outline: none;
+  }
+
+  .sun {
+    visibility: ${({ themeIsLight }) => (themeIsLight ? "visible" : "hidden")};
+    margin-left: 0.1rem;
+    color: ${({ theme }) => theme.navBackground};
+  }
+
+  .moon {
+    margin-right: 0.1rem;
+    visibility: ${({ themeIsLight }) => (themeIsLight ? "hidden" : "visible")};
+    color: white;
   }
 `
 

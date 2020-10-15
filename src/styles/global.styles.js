@@ -1,24 +1,19 @@
 import { createGlobalStyle } from "styled-components"
 
-export const lightTheme = {
-  bgOrange: "#ffcf56",
-  bgWhite: "#FFFFFF",
-  text: "#303030",
+export const GlobalStyle = createGlobalStyle`
+* {
+  margin: 0;
+  padding: 0;
 }
 
-export const darkTheme = {}
-
-export const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
   font-family: "Roboto", "sans-serif";
   font-weight: 300;
   font-size: 16px;
-  color: ${props => props.theme.text}
-}
-
-ul {
-  padding: 0;
+  color: ${props => props.theme.text};
+  background: ${props => props.theme.background};
+  transition: all 0.25s linear;
 }
 
 li {
