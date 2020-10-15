@@ -1,18 +1,24 @@
 import React, { useState } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import styled, { createGlobalStyle } from "styled-components"
-import "typeface-roboto"
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 import { FaBars, FaTimes } from "react-icons/fa"
+import "typeface-roboto"
+
+const lightTheme = {
+  bgOrange: "#ffcf56",
+  bgWhite: "#FFFFFF",
+  text: "#303030",
+}
+
+const darkTheme = {}
 
 const GlobalStyle = createGlobalStyle`
 body {
-   --orange: #ffcf56;
-   --dark-grey: #303030;
   margin: 0;
   font-family: "Roboto", "sans-serif";
   font-weight: 300;
   font-size: 16px;
-  color: var(--dark-grey)
+  color: ${props => props.theme.text}
 }
 
 ul {
@@ -34,7 +40,7 @@ const Nav = styled.nav`
   grid-template-rows: 4rem 1fr;
   padding: 0.5rem 1rem;
 
-  background-color: var(--orange);
+  background-color: ${props => props.theme.bgOrange};
 `
 
 const Title = styled(Link)`
@@ -87,10 +93,6 @@ const Ul = styled.ul`
   align-items: flex-end;
   gap: 0.5rem;
 
-  li {
-    transition: 0.5s;
-  }
-
   a {
     text-decoration: none;
   }
@@ -122,7 +124,7 @@ export default function Layout({ children }) {
   )
 
   return (
-    <>
+    <ThemeProvider theme={lightTheme}>
       <GlobalStyle />
       <header>
         <Nav open={navIsOpen}>
@@ -170,6 +172,6 @@ export default function Layout({ children }) {
           </a>
         </p>
       </Footer>
-    </>
+    </ThemeProvider>
   )
 }
