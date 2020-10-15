@@ -31,6 +31,46 @@ export const Title = styled(Link)`
   }
 `
 
+export const StyledThemeButton = styled(ThemeButton)`
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+  align-self: center;
+
+  width: 40px;
+  height: 25px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: ${({ theme }) => theme.themeToggle};
+  border: none;
+  cursor: pointer;
+
+  @media only screen and (max-width: 599px) {
+    margin-right: 2rem;
+  }
+
+  svg {
+    width: 70%;
+    height: 70%;
+    outline: none;
+  }
+
+  .sun {
+    visibility: ${({ themeIsLight }) => (themeIsLight ? "visible" : "hidden")};
+    margin-left: 0.1rem;
+    color: ${({ theme }) => theme.navBackground};
+  }
+
+  .moon {
+    margin-right: 0.1rem;
+    visibility: ${({ themeIsLight }) => (themeIsLight ? "hidden" : "visible")};
+    color: white;
+  }
+`
+
 export const BurgerButton = styled.button`
   @media only screen and (max-width: 599px) {
     grid-column: 3;
@@ -78,6 +118,7 @@ export const Ul = styled.ul`
   }
 
   @media only screen and (min-width: 600px) {
+    justify-self: center;
     align-self: center;
     display: flex;
     flex-direction: row;
@@ -89,52 +130,22 @@ export const Ul = styled.ul`
   }
 `
 
-export const StyledThemeButton = styled(ThemeButton)`
-  grid-column: 3;
-  grid-row: 1;
-  justify-self: end;
-  align-self: center;
-
-  width: 40px;
-  height: 25px;
-  border-radius: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: ${({ theme }) => theme.themeToggle};
-  border: none;
-  cursor: pointer;
-
-  @media only screen and (max-width: 599px) {
-    margin-right: 2rem;
-  }
-
-  svg {
-    width: 70%;
-    height: 70%;
-    outline: none;
-  }
-
-  .sun {
-    visibility: ${({ themeIsLight }) => (themeIsLight ? "visible" : "hidden")};
-    margin-left: 0.1rem;
-    color: ${({ theme }) => theme.navBackground};
-  }
-
-  .moon {
-    margin-right: 0.1rem;
-    visibility: ${({ themeIsLight }) => (themeIsLight ? "hidden" : "visible")};
-    color: white;
-  }
-`
-
 export const Main = styled.main`
   max-width: 80%;
   margin: auto;
   text-align: center;
+
+  h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
 `
 
 export const Footer = styled.footer`
+  margin-top: 2rem;
   text-align: center;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
 `
