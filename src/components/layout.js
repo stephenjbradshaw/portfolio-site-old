@@ -3,6 +3,7 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 import { FaBars, FaTimes } from "react-icons/fa"
 import "typeface-roboto"
 import { ThemeProvider } from "styled-components"
+import { lightTheme, darkTheme, GlobalStyle } from "../styles/global.styles"
 import {
   Nav,
   Title,
@@ -11,11 +12,10 @@ import {
   Main,
   Footer,
 } from "../styles/layout.styles"
-import { lightTheme, darkTheme, GlobalStyle } from "../styles/global.styles"
 
 export default function Layout({ children }) {
   const [navIsOpen, setNavOpen] = useState(false)
-
+  
   const data = useStaticQuery(
     graphql`
       query {
