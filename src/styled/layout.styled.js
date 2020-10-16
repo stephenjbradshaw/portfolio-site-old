@@ -26,7 +26,7 @@ export const Footer = styled.footer`
   background: ${props => props.theme.footerBackground};
 
   p {
-    margin-bottom: 0.5rem;
+    margin: 0rem;
   }
 `
 
