@@ -6,6 +6,7 @@ export const Nav = styled.nav`
   display: grid;
   padding: 0.5rem 1rem;
   background-color: ${props => props.theme.navBackground};
+  color: ${props => props.theme.navText};
 
   @media only screen and (max-width: 599px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -131,6 +132,7 @@ export const Ul = styled.ul`
 `
 
 export const Main = styled.main`
+  height: 100%;
   padding: 1rem;
   text-align: center;
 
@@ -141,6 +143,7 @@ export const Main = styled.main`
 `
 
 export const Footer = styled.footer`
+  height: 20vh;
   margin-top: 2rem;
   text-align: center;
 
