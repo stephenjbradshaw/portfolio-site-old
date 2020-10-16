@@ -1,8 +1,7 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
 import AllPosts from "../components/all-blog-posts"
 
 export default function Blog({ data }) {
@@ -13,9 +12,6 @@ export default function Blog({ data }) {
       <SEO title="All posts" />
       <h1>Blog posts</h1>
       <AllPosts posts={posts} />
-      <Link to="/">
-        <Button marginTop="85px">Go Home</Button>
-      </Link>
     </Layout>
   )
 }
@@ -38,6 +34,14 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 1024) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            featuredImageAlt
           }
         }
       }
