@@ -2,6 +2,36 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import ThemeButton from "../components/theme-button"
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`
+
+export const Main = styled.main`
+  flex: 1 1 auto;
+  padding: 1rem;
+  text-align: center;
+
+  background: ${props => props.theme.background};
+
+  h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+`
+
+export const Footer = styled.footer`
+  padding: 2rem 0rem 0.5rem;
+  text-align: center;
+
+  background: ${props => props.theme.footerBackground};
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+`
+
 export const Nav = styled.nav`
   display: grid;
   padding: 0.5rem 1rem;
@@ -132,26 +162,5 @@ export const Ul = styled.ul`
     :hover {
       font-weight: bold;
     }
-  }
-`
-
-export const Main = styled.main`
-  height: 100%;
-  padding: 1rem;
-  text-align: center;
-
-  h1 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-`
-
-export const Footer = styled.footer`
-  height: 20vh;
-  margin-top: 2rem;
-  text-align: center;
-
-  p {
-    margin-bottom: 0.5rem;
   }
 `

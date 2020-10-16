@@ -4,7 +4,8 @@ export const lightTheme = {
   navBackground: "#fff",
   navText: "#303030",
   cardBackground: "#fff",
-  themeToggle: "#92e8f7",
+  themeToggle: "#43b1cc",
+  footerBackground: "linear-gradient(to bottom, #fff, #ffcf56)",
   accent: "yellow",
 }
 
@@ -13,6 +14,7 @@ export const darkTheme = {
   text: "#fff",
   navBackground: "#ffcf56",
   navText: "#303030",
-  cardBackground: "#424242",
   themeToggle: "#191970",
+  cardBackground: "#424242",
+  footerBackground: "linear-gradient(to bottom, #606060, #303030)",
 }
