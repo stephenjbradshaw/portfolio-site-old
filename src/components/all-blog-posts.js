@@ -66,9 +66,7 @@ export default function AllPosts({ posts }) {
                 <StyledImage fluid={featuredImage.childImageSharp.fluid} />
               )}
               <Section>
-                <Title>
-                  <h2>{title}</h2>
-                </Title>
+                <Title>{title}</Title>
 
                 <Description
                   dangerouslySetInnerHTML={{
