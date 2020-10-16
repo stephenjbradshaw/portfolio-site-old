@@ -48,19 +48,54 @@ export default function Header({ themeIsLight, setThemeIsLight }) {
         </BurgerButton>
         <Ul open={navIsOpen}>
           <li>
-            <Link to="/">Home</Link>
+            <Link
+              to="/"
+              activeStyle={{
+                textDecoration: "underline",
+              }}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about/">About</Link>
+            <Link
+              to="/about/"
+              activeStyle={{
+                textDecoration: "underline",
+              }}
+            >
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/projects/">Projects</Link>
+            <Link
+              to="/projects/"
+              activeStyle={{
+                textDecoration: "underline",
+              }}
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <Link to="/blog/">Blog</Link>
+            <Link
+              to="/blog/"
+              activeStyle={{
+                textDecoration: "underline",
+              }}
+            >
+              Blog
+            </Link>
           </li>
           <li>
-            <Link to="/contact/">Contact</Link>
+            <Link
+              to="/contact/"
+              activeStyle={{
+                textDecoration: "underline",
+              }}
+            >
+              Contact
+            </Link>
           </li>
         </Ul>
       </Nav>
