@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import Header from "../components/header"
 import { ThemeProvider } from "styled-components"
-import { GlobalStyle } from "../styles/global.styles"
-import { lightTheme, darkTheme } from "../styles/theme.styles"
-import { Wrapper, Main, Footer } from "../styles/layout.styles"
+import { GlobalStyle } from "../styled/global.styled"
+import { lightTheme, darkTheme } from "../styled/theme.styled"
+import { Wrapper, Main, Footer } from "../styled/layout.styled"
 import "typeface-roboto"
 
 export default function Layout({ children }) {

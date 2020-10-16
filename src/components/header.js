@@ -7,7 +7,7 @@ import {
   BurgerButton,
   Ul,
   StyledThemeButton,
-} from "../styles/header.styles"
+} from "../styled/header.styled"
 
 export default function Header({ themeIsLight, setThemeIsLight }) {
   const [navIsOpen, setNavIsOpen] = useState(false)
