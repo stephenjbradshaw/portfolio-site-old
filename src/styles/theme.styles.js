@@ -1,14 +1,15 @@
 export const lightTheme = {
-  navBackground: "#ffcf56",
   background: "#fff",
+  navBackground: "#ffcf56",
+  cardBackground: "#fff",
   text: "#303030",
-
   themeToggle: "#43b1cc",
 }
 
 export const darkTheme = {
-  navBackground: "#ffcf56",
   background: "#303030",
+  navBackground: "#ffcf56",
+  cardBackground: "#424242",
   text: "#fff",
   themeToggle: "#191970",
 }
