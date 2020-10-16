@@ -131,8 +131,7 @@ export const Ul = styled.ul`
 `
 
 export const Main = styled.main`
-  max-width: 80%;
-  margin: auto;
+  padding: 1rem;
   text-align: center;
 
   h1 {
