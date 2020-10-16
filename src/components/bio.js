@@ -3,6 +3,24 @@ import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
 
+const BioWrapper = styled.section`
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: 0rem;
+  }
+
+  a {
+    margin: 0rem;
+  }
+`
+
+const StyledImage = styled(Image)`
+  margin-right: 1rem;
+  margin-bottom: 0rem;
+`
+
 export default function Bio() {
   return (
     <StaticQuery
@@ -10,28 +28,21 @@ export default function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <Container>
-            <Image
+          <BioWrapper>
+            <StyledImage
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
-              style={{
-                marginRight: `20px`,
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
             />
-            <p>
-              Written by <strong>{author}</strong>
-              {` `}
+            <section>
+              <p>
+                Written by <strong>{author}</strong>
+                {` `}
+              </p>
               <a href={`https://www.github.com/${social.github}`}>
                 View my projects on github
               </a>
-            </p>
-          </Container>
+            </section>
+          </BioWrapper>
         )
       }}
     />
@@ -57,8 +68,3 @@ const bioQuery = graphql`
     }
   }
 `
-
-const Container = styled.div`
-  display: flex;
-`
-

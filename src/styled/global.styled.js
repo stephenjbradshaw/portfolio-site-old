@@ -1,11 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-* {
-  margin: 0;
-  padding: 0;
- 
-}
 
 body {
   margin: 0;
@@ -14,6 +9,11 @@ body {
   font-size: 16px;
   color: ${props => props.theme.text};
   transition: all 0.25s linear;
+  line-height: 1.6;
+}
+
+ul, ol {
+  padding: 0rem;
 }
 
 li {
