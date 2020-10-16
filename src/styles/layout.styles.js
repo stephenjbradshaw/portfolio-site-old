@@ -128,6 +128,10 @@ export const Ul = styled.ul`
 
   a {
     text-decoration: none;
+
+    :hover {
+      font-weight: bold;
+    }
   }
 `
 
