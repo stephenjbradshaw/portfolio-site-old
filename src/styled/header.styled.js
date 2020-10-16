@@ -41,6 +41,7 @@ export const StyledThemeButton = styled(ThemeButton)`
   width: 40px;
   height: 25px;
   border-radius: 100px;
+  padding: 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
