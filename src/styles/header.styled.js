@@ -6,6 +6,7 @@ export const Nav = styled.nav`
   padding: 0.5rem 1rem;
   background-color: ${props => props.theme.navBackground};
   color: ${props => props.theme.navText};
+  transition: background-color 0.5s linear;
 
   @media only screen and (max-width: 599px) {
     grid-template-columns: 1fr 1fr 1fr;

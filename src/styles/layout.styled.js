@@ -29,4 +29,3 @@ export const Footer = styled.footer`
     margin: 0rem;
   }
 `
-
