@@ -49,7 +49,7 @@ export default function Header() {
                 <Link
                   to="/"
                   activeStyle={{
-                    textDecoration: "underline",
+                    fontWeight: "bold",
                   }}
                 >
                   Home
@@ -59,7 +59,7 @@ export default function Header() {
                 <Link
                   to="/about/"
                   activeStyle={{
-                    textDecoration: "underline",
+                    fontWeight: "bold",
                   }}
                 >
                   About
@@ -69,7 +69,7 @@ export default function Header() {
                 <Link
                   to="/projects/"
                   activeStyle={{
-                    textDecoration: "underline",
+                    fontWeight: "bold",
                   }}
                 >
                   Projects
@@ -79,7 +79,7 @@ export default function Header() {
                 <Link
                   to="/blog/"
                   activeStyle={{
-                    textDecoration: "underline",
+                    fontWeight: "bold",
                   }}
                 >
                   Blog
@@ -89,7 +89,7 @@ export default function Header() {
                 <Link
                   to="/contact/"
                   activeStyle={{
-                    textDecoration: "underline",
+                    fontWeight: "bold",
                   }}
                 >
                   Contact

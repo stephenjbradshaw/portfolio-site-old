@@ -8,7 +8,6 @@ body {
   font-weight: 300;
   font-size: 16px;
   color: ${props => props.theme.text};
-  transition: all 0.25s linear;
   line-height: 1.6;
 }
 
