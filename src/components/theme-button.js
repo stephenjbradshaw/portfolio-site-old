@@ -1,16 +1,12 @@
 import React from "react"
 import { FaSun, FaMoon } from "react-icons/fa"
 
-export default function ThemeButton({
-  themeIsLight,
-  setThemeIsLight,
-  className,
-}) {
+export default function ThemeButton({ className, changeTheme }) {
   return (
     <button
       className={className}
       onClick={() => {
-        setThemeIsLight(!themeIsLight)
+        changeTheme()
       }}
     >
       <FaSun className="sun" aria-hidden="true" tabIndex="-1" />

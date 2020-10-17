@@ -61,14 +61,14 @@ export const StyledThemeButton = styled(ThemeButton)`
   }
 
   .sun {
-    visibility: ${({ themeIsLight }) => (themeIsLight ? "visible" : "hidden")};
+    visibility: ${({ isDark }) => (isDark ? "hidden" : "visible")};
     margin-left: 0.1rem;
     color: ${({ theme }) => theme.accent};
   }
 
   .moon {
     margin-right: 0.1rem;
-    visibility: ${({ themeIsLight }) => (themeIsLight ? "hidden" : "visible")};
+    visibility: ${({ isDark }) => (isDark ? "visible" : "hidden")};
     color: white;
   }
 `
