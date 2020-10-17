@@ -1,15 +1,15 @@
 import React from "react"
 import Header from "../components/header"
-import { GlobalStyle } from "../styled/global.styled"
-import { Wrapper, Main, Footer } from "../styled/layout.styled"
-import { myContext } from "../../provider"
-import { lightTheme, darkTheme } from "../styled/theme.styled"
+import { GlobalStyle } from "../styles/global"
+import { Wrapper, Main, Footer } from "../styles/layout.styled"
+import { themeContext } from "./theme-context"
+import { lightTheme, darkTheme } from "../styles/themes"
 import { ThemeProvider } from "styled-components"
 import "typeface-roboto"
 
 export default function Layout({ children }) {
   return (
-    <myContext.Consumer>
+    <themeContext.Consumer>
       {context => (
         <ThemeProvider theme={context.isDark ? darkTheme : lightTheme}>
           <GlobalStyle />
@@ -28,6 +28,6 @@ export default function Layout({ children }) {
           </Wrapper>
         </ThemeProvider>
       )}
-    </myContext.Consumer>
+    </themeContext.Consumer>
   )
 }

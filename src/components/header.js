@@ -1,14 +1,9 @@
 import React, { useState } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { FaBars, FaTimes } from "react-icons/fa"
-import {
-  Nav,
-  Title,
-  BurgerButton,
-  Ul,
-  StyledThemeButton,
-} from "../styled/header.styled"
-import { myContext } from "../../provider"
+import { Nav, Title, BurgerButton, Ul } from "../styles/header.styled"
+import { StyledThemeButton } from "../styles/theme-button.styled"
+import { themeContext } from "./theme-context"
 
 export default function Header() {
   const [navIsOpen, setNavIsOpen] = useState(false)
@@ -26,7 +21,7 @@ export default function Header() {
   )
 
   return (
-    <myContext.Consumer>
+    <themeContext.Consumer>
       {context => (
         <header>
           <Nav open={navIsOpen}>
@@ -104,6 +99,6 @@ export default function Header() {
           </Nav>
         </header>
       )}
-    </myContext.Consumer>
+    </themeContext.Consumer>
   )
 }
