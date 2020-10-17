@@ -17,10 +17,11 @@ export const Post = styled.li`
   background-color: ${props => props.theme.cardBackground};
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.4);
   border-radius: 7px;
-  transition: 0.1s;
+  transition: background-color 0.5s linear;
 
   :hover {
     transform: scale(1.01);
+    transition: 0.1s;
   }
 `
 
