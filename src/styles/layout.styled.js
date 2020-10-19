@@ -18,14 +18,3 @@ export const Main = styled.main`
     margin-bottom: 1rem;
   }
 `
-
-export const Footer = styled.footer`
-  padding: 2rem 0rem 0.5rem;
-  text-align: center;
-
-  background: ${props => props.theme.footerBackground};
-
-  p {
-    margin: 0rem;
-  }
-`
