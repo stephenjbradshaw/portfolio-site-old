@@ -9,8 +9,13 @@ body {
   font-size: 16px;
   color: ${props => props.theme.text};
   transition: color 0.5s linear;
-  line-height: 1.6;
+
 }
+
+h1, p, ul, ol {
+  line-height: 1.6
+}
+
 
 ul, ol {
   padding: 0rem;

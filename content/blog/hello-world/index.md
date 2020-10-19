@@ -1,6 +1,10 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+path: dummy-post
+date: 2020-06-06T01:22:55.506Z
+title: Dummy Post
+description: Dummy blog post
+featuredImage: ./great2.jpg
+featuredImageAlt: Great Gatsby
 ---
 
 This is my first post on my new fake blog! How exciting!

@@ -1,7 +1,8 @@
 import React from "react"
-import Header from "../components/header"
 import { GlobalStyle } from "../styles/global"
-import { Wrapper, Main, Footer } from "../styles/layout.styled"
+import Header from "../components/header"
+import { Wrapper, Main } from "../styles/layout.styled"
+import { StyledFooter } from "../styles/footer.styled"
 import { themeContext } from "./theme-context"
 import { lightTheme, darkTheme } from "../styles/themes"
 import { ThemeProvider } from "styled-components"
@@ -16,15 +17,7 @@ export default function Layout({ children }) {
           <Wrapper>
             <Header />
             <Main>{children}</Main>
-            <Footer>
-              <p>© Built by Stephen Bradshaw, {new Date().getFullYear()}</p>
-              <p>
-                Source code on{" "}
-                <a href="https://github.com/stephenjbradshaw/portfolio-site">
-                  Github
-                </a>
-              </p>
-            </Footer>
+            <StyledFooter/>
           </Wrapper>
         </ThemeProvider>
       )}

@@ -1,7 +1,7 @@
 export const lightTheme = {
-  background: "linear-gradient(to bottom, #ffcf56, #fff)",
+  background: "fff",
   text: "#303030",
-  navBackground: "#fff",
+  navBackground: "#ffcf56",
   navText: "#303030",
   cardBackground: "#fff",
   themeToggle: "#43b1cc",

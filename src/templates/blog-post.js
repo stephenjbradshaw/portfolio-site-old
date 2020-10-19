@@ -9,7 +9,7 @@ import {
   Article,
   Separator,
   NavLinks,
-} from "../styled/blog-post.styled"
+} from "../styles/blog-post.styled"
 
 export default function BlogPostTemplate({ data, pageContext }) {
   const post = data.mdx
