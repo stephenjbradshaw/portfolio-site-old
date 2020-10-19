@@ -29,12 +29,18 @@ export default function IndexPage({ data }) {
         </p>
         <p>
           Outside of coding, I have a passion for making experimental music and
-          art, and I enjoy cycling-touring and kayaking.
+          art, and I enjoy cycling-touring and kayaking.{" "}
+          <span role="img" aria-label="bicycle emoji">
+            🚲
+          </span>{" "}
+          <span role="img" aria-label="canoe emoji">
+            🛶
+          </span>{" "}
         </p>
         <p>
           This site is a space to showcase my coding projects and to write about
-          tech topics that I'm learning about. If you have any questions, I'd
-          <a href="/contact"> love to hear from you!</a>
+          tech topics that I'm learning about. If you have any questions,{" "}
+          <a href="/contact">I'd love to hear from you!</a>
         </p>
       </Wrapper>
     </Layout>
