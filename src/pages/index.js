@@ -1,39 +1,60 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
+import { Wrapper, StyledImg } from "../styles/index.styled"
 
-class IndexPage extends React.Component {
-  render() {
-    const siteTitle = "Gatsby Starter Personal Website"
-
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="Home"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+export default function IndexPage({ data }) {
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <Wrapper>
+        <h1>Hello! I'm Stephen </h1>
+        <h2>I'm a full-stack developer from Manchester</h2>
+        <StyledImg
+          fluid={data.file.childImageSharp.fluid}
+          alt="Stephen Bradshaw"
         />
-        <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
-        <h1>
-          Hey people{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>
-        </h1>
-        <p>Welcome to your new Gatsby website. You are on your home page.</p>
         <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
+          I love learning new technologies and being creative, and I recently
+          graduated from{" "}
+          <a
+            href="https://www.northcoders.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Northcoders
+          </a>{" "}
+          coding bootcamp.
         </p>
-        <p>Now go build something great!</p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
-      </Layout>
-    )
-  }
+        <p>
+          Outside of coding, I have a passion for making experimental music and
+          art, and I enjoy cycling-touring and kayaking.{" "}
+          <span role="img" aria-label="bicycle emoji">
+            🚲
+          </span>{" "}
+          <span role="img" aria-label="canoe emoji">
+            🛶
+          </span>{" "}
+        </p>
+        <p>
+          This site is a space to showcase my coding projects and to write about
+          tech topics that I'm learning about. If you have any questions,{" "}
+          <a href="/contact">I'd love to hear from you!</a>
+        </p>
+      </Wrapper>
+    </Layout>
+  )
 }
 
-export default IndexPage
+export const pageQuery = graphql`
+  query MyQuery {
+    file(relativePath: { eq: "headshot-circle.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }
+`

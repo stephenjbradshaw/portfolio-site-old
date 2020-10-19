@@ -1,47 +1,48 @@
-/**
- * Bio component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
 
-import { rhythm } from "../utils/typography"
+const BioWrapper = styled.section`
+  display: flex;
+  align-items: center;
 
-function Bio() {
+  p {
+    margin: 0rem;
+  }
+
+  a {
+    margin: 0rem;
+  }
+`
+
+const StyledImage = styled(Image)`
+  margin-right: 1rem;
+  margin-bottom: 0rem;
+`
+
+export default function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <Container>
-            <Image
+          <BioWrapper>
+            <StyledImage
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
             />
-            <p>
-              Written by <strong>{author}</strong>, a framework built upon the
-              React library.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Follow me on Twitter
+            <section>
+              <p>
+                Written by <strong>{author}</strong>
+                {` `}
+              </p>
+              <a href={`https://www.github.com/${social.github}`}>
+                View my projects on github
               </a>
-            </p>
-          </Container>
+            </section>
+          </BioWrapper>
         )
       }}
     />
@@ -50,7 +51,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/gatsby-icon.png/" }) {
+    avatar: file(absolutePath: { regex: "/headshot-circle.png/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
@@ -61,15 +62,9 @@ const bioQuery = graphql`
       siteMetadata {
         author
         social {
-          twitter
+          github
         }
       }
     }
   }
 `
-
-const Container = styled.div`
-  display: flex;
-`
-
-export default Bio

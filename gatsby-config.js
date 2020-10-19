@@ -5,7 +5,8 @@ module.exports = {
     description: `Personal portfolio site`,
     siteUrl: `https://www.stephenbradshaw.dev`,
     social: {
-      twitter: ``,
+      github: `stephenjbradshaw`,
+      linkedin: `stephenbradshawdev`,
     },
   },
   plugins: [
@@ -15,49 +16,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: "gatsby-plugin-local-search",
-      options: {
-        name: "blog",
-        engine: "flexsearch",
-        engineOptions: {
-          encode: "icase",
-          tokenize: "forward",
-          async: false,
-        },
-        query: `
-          {
-            allMdx {
-              nodes {
-                id
-                fields { slug }
-                excerpt
-                rawBody
-                frontmatter {
-                  title
-                  description
-                  date(formatString: "MMMM DD, YYYY")
-                }
-              }
-            }
-          }
-        `,
-        ref: "id",
-        index: ["title", "rawBody"],
-        store: ["id", "slug", "date", "title", "excerpt", "description"],
-        normalizer: ({ data }) =>
-          data.allMdx.nodes.map(node => ({
-            id: node.id,
-            slug: node.fields.slug,
-            rawBody: node.rawBody,
-            excerpt: node.excerpt,
-            title: node.frontmatter.title,
-            description: node.frontmatter.description,
-            date: node.frontmatter.date,
-          })),
-      },
-    },
-    `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-root-import`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -104,29 +62,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Stephen Bradshaw`,
+        short_name: `SB`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffcf56`,
         display: `minimal-ui`,
-        // edit below
-        icon: `content/assets/gatsby-icon.png`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
+        icon: `content/assets/logo.png`,
       },
     },
   ],
