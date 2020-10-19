@@ -5,13 +5,13 @@ import SEO from "../components/seo"
 import { Wrapper, StyledImg } from "../styles/index.styled"
 
 export default function IndexPage({ data }) {
-  console.log(data)
   return (
     <Layout>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <Wrapper>
         <h1>Hello! I'm Stephen </h1>
         <h2>I'm a full-stack developer from Manchester</h2>
+        <StyledImg fluid={data.file.childImageSharp.fluid} alt="Stephen Bradshaw" />
         <p>
           I love learning new technologies and being creative, and I recently
           graduated from{" "}
@@ -25,9 +25,9 @@ export default function IndexPage({ data }) {
           coding bootcamp.
         </p>
         <p>
-          Outside of coding, I have a passion for making experimental music and art, and I enjoy cycling-touring and kayaking.
+          Outside of coding, I have a passion for making experimental music and
+          art, and I enjoy cycling-touring and kayaking.
         </p>
-        <StyledImg fluid={data.file.childImageSharp.fluid} />
       </Wrapper>
     </Layout>
   )
