@@ -11,7 +11,10 @@ export default function IndexPage({ data }) {
       <Wrapper>
         <h1>Hello! I'm Stephen </h1>
         <h2>I'm a full-stack developer from Manchester</h2>
-        <StyledImg fluid={data.file.childImageSharp.fluid} alt="Stephen Bradshaw" />
+        <StyledImg
+          fluid={data.file.childImageSharp.fluid}
+          alt="Stephen Bradshaw"
+        />
         <p>
           I love learning new technologies and being creative, and I recently
           graduated from{" "}
@@ -27,6 +30,11 @@ export default function IndexPage({ data }) {
         <p>
           Outside of coding, I have a passion for making experimental music and
           art, and I enjoy cycling-touring and kayaking.
+        </p>
+        <p>
+          This site is a space to showcase my coding projects and to write about
+          tech topics that I'm learning about. If you have any questions, I'd
+          <a href="/contact"> love to hear from you!</a>
         </p>
       </Wrapper>
     </Layout>
