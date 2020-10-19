@@ -28,7 +28,7 @@ export const Title = styled(Link)`
 
   h1 {
     margin: 0;
-    font-size: 12pt;
+    font-size: 13pt;
   }
 `
 
@@ -88,6 +88,7 @@ export const Ul = styled.ul`
 
   a {
     text-decoration: none;
+    font-size: 13pt;
 
     :hover {
       font-weight: bold;
