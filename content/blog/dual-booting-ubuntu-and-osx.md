@@ -49,7 +49,7 @@ I downloaded Ubuntu 20.04, and, following the [docs](https://ubuntu.com/tutorial
 
 ## Installing kernel patches and drivers
 
-As expected, very little of the hardware worked straight out of the box using Ubuntu 20.04. To proceed with fixing the system, I had to use an external screen, USB wifi card, keyboard, and mouse. I found  a set of patches that (experimentally) provide the extra hardware support, and following [these instructions] (https://gist.github.com/gbrow004/096f845c8fe8d03ef9009fbb87b781a4#compiling-a-new-kernel-with-patches-to-complete-almost-the-functionality-of-your-mbp) compiled a custom kernel with the ability to talk to the internal keyboard, trackpad and touchpad.
+As expected, very little of the hardware worked straight out of the box using Ubuntu 20.04. To proceed with fixing the system, I had to use an external screen, USB wifi card, keyboard, and mouse. I found  a set of patches that (experimentally) provide the extra hardware support, and following [these instructions](https://gist.github.com/gbrow004/096f845c8fe8d03ef9009fbb87b781a4#compiling-a-new-kernel-with-patches-to-complete-almost-the-functionality-of-your-mbp) compiled a custom kernel with the ability to talk to the internal keyboard, trackpad and touchpad.
 
 I also needed to separately compile and install a driver called `bce` that provides a communication channel with the Apple T2 security chip. This can be found [here](https://github.com/MCMrARM/mbp2018-bridge-drv) and instructions to compile it are [here](https://gist.github.com/gbrow004/096f845c8fe8d03ef9009fbb87b781a4#keyboardtouchpad). Additionally, I needed to manually install dependencies, namely `flex` and `bison`.
 
