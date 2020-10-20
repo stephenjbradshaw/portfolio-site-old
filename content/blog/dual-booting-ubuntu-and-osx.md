@@ -1,7 +1,7 @@
 ---
 path: dual-booting-ubuntu-osx
 date: 2020-10-19T22:00:52.348Z
-title: Dual booting Ubuntu and OSX
+title: Dual-booting Ubuntu and OSX
 description: A summary of my experience getting Linux working on recent Apple hardware
 featuredImage: ../assets/ubuntu-installer.jpg
 featuredImageAlt: Ubuntu 20.04 Installer
