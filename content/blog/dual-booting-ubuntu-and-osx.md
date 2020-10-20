@@ -8,7 +8,7 @@ featuredImageAlt: Ubuntu 20.04 Installer
 ---
 I've been wanting to learn more about Linux and the open-source community for a while – as someone who loves making things I'm really attracted by the DIY culture, and the possibilities for customisation that Linux offers.
 
-However, I'm also a long-time Mac user, and I regularly use software that doesn't have great Linux equivalent – particularly the Adobe CC suite and Max/MSP (a visual programming environment for working with interactive multimedia).
+However, I'm also a long-time Mac user, and I regularly use software that doesn't have great Linux equivalent – particularly the Adobe CC suite and [Max/MSP](https://en.wikipedia.org/wiki/Max_(software)) (a visual programming environment for working with interactive multimedia).
 
 So, not being in a position to buy a second machine, I decided to have a go at setup up a dual-boot / OSX system on my MacbookPro 16,1 (2019) as a hobby project. 
 
