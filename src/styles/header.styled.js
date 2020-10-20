@@ -75,7 +75,7 @@ export const Ul = styled.ul`
 
     flex-direction: column;
     align-items: flex-end;
-    gap: 0.5rem;
+    margin: 0rem 0.5rem;
   }
 
   @media only screen and (min-width: 600px) {

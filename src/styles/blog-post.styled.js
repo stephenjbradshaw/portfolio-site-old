@@ -36,10 +36,6 @@ export const Article = styled.article`
   img {
     border-radius: 8px;
   }
-
-  a {
-    word-break: break-all;
-  }
 `
 
 export const Separator = styled.hr`
