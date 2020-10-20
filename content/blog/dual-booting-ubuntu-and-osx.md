@@ -10,7 +10,7 @@ I've been wanting to learn more about Linux and the open-source community for a 
 
 However, I'm also a long-time Mac user, and I regularly use software that doesn't have great Linux equivalent – particularly the Adobe CC suite and [Max/MSP](https://en.wikipedia.org/wiki/Max_(software)) (a visual programming environment for working with interactive multimedia).
 
-So, not being in a position to buy a second machine, I decided to have a go at setup up a dual-boot / OSX system on my MacbookPro 16,1 (2019) as a hobby project. 
+So, not being in a position to buy a second machine, I decided to have a go at setup up a dual-boot Ubuntu / OSX system on my MacbookPro 16,1 (2019) as a hobby project. 
 
 I soon discovered that there are a lot of incompatibilities between recent Apple hardware the Linux kernel as it currently stands, and I ended up on a much steeper learning curve than I'd expected...! Using guides and patches written by others, I was eventually able to set up a working system, which I used as my main dev environment throughout my time on the [Northcoders](https://www.northcoders.com/) coding bootcamp. The install process taught me a lot about Linux, it really built my confidence at the command line, and I had a lot of fun to boot! (pun intended).
 
@@ -19,16 +19,18 @@ I've added links to much of the guidance I followed – but [this one](https://g
 
 I should say that this all happened before Apple announced, last June, that they would be switching to ARM CPU architecture. It seems that this will eventually mean the end of being able to run Linux natively on Mac hardware – but for now, I'm going to enjoy having the best of both worlds!
 
-***
+- - -
 
 ## Hardware / Software used
-- 16-inch Macbook Pro 2019 (Model indentifier 16,1)
-- Ubuntu 20.04 LTS (Focal Fossa). This uses Linux kernel v5.4 LTS.
-- Linux Kernel v5.6-rc6 with drivers and patches by [MCMrARM](https://github.com/MCMrARM/mbp2018-bridge-drv) and [
-Aun-Ali Zaidi](https://github.com/aunali1/linux-mbp-arch)
-- [rEFInd](https://www.rodsbooks.com/refind/) boot manager
+
+* 16-inch Macbook Pro 2019 (Model indentifier 16,1)
+* Ubuntu 20.04 LTS (Focal Fossa). This uses Linux kernel v5.4 LTS.
+* Linux Kernel v5.6-rc6 with drivers and patches by [MCMrARM](https://github.com/MCMrARM/mbp2018-bridge-drv) and [
+  Aun-Ali Zaidi](https://github.com/aunali1/linux-mbp-arch)
+* [rEFInd](https://www.rodsbooks.com/refind/) boot manager
 
 ## Hardware problems
+
 Doing my research, I discovered that even the latest Linux kernels (as of May 2020) don’t support post-c.2018 Apple hardware. If a Linux distribution boots successfully on a Mac at all, often the WiFi, keyboard & trackpad, audio and Touch Bar will not work. One of the main problems is Apple’s [T2 security chip](https://support.apple.com/en-us/HT208862). As well as preventing third-party operating systems from running, it controls access to most of the peripherals, including the built-in keyboard and Touch Bar. Luckily, there are several developers out there who have written patches to add support.
 
 ## Backing up
@@ -61,7 +63,7 @@ Once I’d installed the custom kernel and the `bce` driver, I was able to boot 
 
 At first the internal screen would still not light up. After doing some Googling, I found that some people have had success by adding `amdgpu.dc=0` to the kernel parameters. This worked perfectly for me, and I added it permanently to rEFInd's config file, following this guide to adding kernel parameters from the [Arch Linux site](https://wiki.archlinux.org/index.php/kernel_parameters#rEFInd).
 
-## What as the final result like?
+## What's the final result like?
 
 I now have a really fast Ubuntu system that I use for software development, running alongside the pre-installed Mac OSX. Most things work pretty well, but there’s definitely room for improvement. Here’s how things are running at the moment, in no particular order:
 
@@ -82,19 +84,20 @@ I now have a really fast Ubuntu system that I use for software development, runn
 
 As a learning experience – absolutely! It forced me to research and learn about lots of things like **UEFI booting**, Linux **kernel modules** and the **Linux filesystem**, how to compile software written in C and much more – and I really enjoyed the challenge of it.
 
-I would not recommend it if you want a quick way to get going with Linux! (Although apparently the process is significantly easier on older  Macs that don't have a T1 or T2 chip).
+I would not recommend it if you want a quick way to get going with Linux! (Although apparently the process is significantly easier on older Macs that don't have a T1 or T2 chip).
 
 If and when I change my setup in the future, I'll probably use a virtual machine, or ideally buy a PC and dedicate that to running Linux. That said, I've been really glad of the fact that my Mac's full performance is leveraged in my current setup.
 
-***
+- - -
 
 ### Appendix: Useful `bash` commands and files for debugging hardware issues
-- `modprobe`: add or remove a loadable kernel module
-- `insmod` / `rmmod`: alternative commands to insert or remove kernel modules
-- `dmesg`: view kernel messages
--  `dmesg | grep -i usb`: perform a case-**i**nsensitive search of the `dmesg` output for "usb"
-- `lspci`: list all PCI devices
-- `lspci -k`: list all PCI devices, including information about **which kernel modules are handling each device**.
-- `lspci -v | grep -i usb`: perform a case-**i**nsensitive search of the `lspci` output for "usb"
-- `/etc/modprobe.d/blacklist.conf`: kernel modules listed here are blacklisted
-- `/etc/modules`: kernel modules listed here are loaded at boot time
+
+* `modprobe`: add or remove a loadable kernel module
+* `insmod` / `rmmod`: alternative commands to insert or remove kernel modules
+* `dmesg`: view kernel messages
+* `dmesg | grep -i usb`: perform a case-**i**nsensitive search of the `dmesg` output for "usb"
+* `lspci`: list all PCI devices
+* `lspci -k`: list all PCI devices, including information about **which kernel modules are handling each device**.
+* `lspci -v | grep -i usb`: perform a case-**i**nsensitive search of the `lspci` output for "usb"
+* `/etc/modprobe.d/blacklist.conf`: kernel modules listed here are blacklisted
+* `/etc/modules`: kernel modules listed here are loaded at boot time
