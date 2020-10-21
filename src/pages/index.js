@@ -29,7 +29,7 @@ export default function IndexPage({ data }) {
         </p>
         <p>
           Outside of coding, I have a passion for making experimental music and
-          art, and I enjoy cycling-touring and kayaking.{" "}
+          art, and I enjoy cycle-touring and kayaking.{" "}
           <span role="img" aria-label="bicycle emoji">
             🚲
           </span>{" "}
