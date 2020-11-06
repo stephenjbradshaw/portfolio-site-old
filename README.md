@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-Personal portfolio site to showcase my coding projects, and to write about tech topics that I'm learning about. The site is built using Gatsby, React, GraphQl and Styled Components, and content is managed using Netlify CMS.
+Personal portfolio site to showcase my coding projects, and to write about tech topics that I'm learning about. The site is built using Gatsby, React, GraphQL and Styled Components, and content is managed using Netlify CMS.
 </p>
 
 ## To run locally
