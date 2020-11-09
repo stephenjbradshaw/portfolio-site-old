@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import Exo from "typeface-exo"
 
 export const Nav = styled.nav`
   display: grid;
