@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Footer from "../components/footer"
 
 export const StyledFooter = styled(Footer)`
-  padding: 4rem 0rem 1rem;
+  padding: 2rem 0rem 0.9rem;
   text-align: center;
 
   background: ${props => props.theme.footerBackground};
