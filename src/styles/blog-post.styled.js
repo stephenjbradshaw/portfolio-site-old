@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const BlogWrapper = styled.div`
-  max-width: 35rem;
+  max-width: 45rem;
   margin: auto;
   text-align: left;
 `
