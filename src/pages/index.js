@@ -2,15 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Wrapper, StyledImg } from "../styles/index.styled"
+import { Wrapper, StyledImg, StyledTitle, StyledTagline } from "../styles/index.styled"
 
 export default function IndexPage({ data }) {
   return (
     <Layout>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <Wrapper>
-        <h1>Hello! I'm Stephen </h1>
-        <h2>I'm a full-stack developer from Manchester</h2>
+        <StyledTitle>Hello! I'm Stephen</StyledTitle>
+        <StyledTagline>I'm a full-stack developer from Manchester</StyledTagline>
         <StyledImg
           fluid={data.file.childImageSharp.fluid}
           alt="Stephen Bradshaw"
