@@ -14,7 +14,6 @@ A few weeks ago, having just finished the [Northcoders](https://www.northcoders.
 Gatsby is a static site generator. What this means is that ahead of the site being delivered, it is built into static HTML, JavaScript and CSS files. These can then be served up to the client from a hosting provider (e.g. [Netlify](https://www.netlify.com)). There are a few [advantages to this approach](https://www.netlify.com/blog/2020/04/14/what-is-a-static-site-generator-and-3-ways-to-find-the-best-one/):
 
 - **Speed**: because the HTML is generated ahead of time, there is no server-side rendering[^1] or server-client communication, both of which are time-expensive. Plus, if the site is hosted on a Content Delivery Network (CDN) like Netlify, visitors will be more likely to be geographically close to the server – meaning faster load times.
-  Or rather, rendering happens in advance using a local Node.js server on your machine
 - **Security:** the fact that there is no server means that there is less potential for security vulnerabilities.
 - **SEO:** static sites tend to be ranked more highly by search engines. This is because they are easy to index (the content is all there in the HTML files and can be easily parsed), and they load quickly, which is a big advantage from the perspective of a search engine.
 
