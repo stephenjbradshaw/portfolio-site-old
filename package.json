@@ -36,7 +36,6 @@
     "react-icons": "^3.11.0",
     "react-switch": "^5.0.0",
     "styled-components": "^4.2.0",
-    "typeface-questrial": "^1.1.13",
     "typeface-roboto": "^1.1.13"
   },
   "devDependencies": {

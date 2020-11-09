@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import Exo from "typeface-exo"
 
 export const Nav = styled.nav`
   display: grid;
@@ -23,12 +24,12 @@ export const Title = styled(Link)`
   grid-column: 1;
   align-self: center;
 
-  box-shadow: none;
   text-decoration: none;
 
   h1 {
     margin: 0;
     font-size: 13pt;
+    letter-spacing: -1px;
   }
 `
 
