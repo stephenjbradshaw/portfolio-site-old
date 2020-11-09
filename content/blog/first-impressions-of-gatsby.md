@@ -1,6 +1,6 @@
 ---
 path: gatsby-first-impressions
-date: 2020-10-20T14:27:24.317Z
+date: 2020-11-07T14:27:24.317Z
 title: First Impressions of Gatsby
 description: Some thoughts about my experience using Gatsby for the first time
 featuredImage: ../assets/gatsby-starter.png
