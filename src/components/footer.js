@@ -13,14 +13,14 @@ export default function Footer({ className }) {
           <footer className={className}>
             <section className={"social"}>
               <a
-                href={`https://github.com/${social.github}`}
+                href={`https://github.com/${social.github}/`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
               </a>
               <a
-                href={`https://linkedin.com/in/${social.linkedin}`}
+                href={`https://linkedin.com/in/${social.linkedin}/`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
