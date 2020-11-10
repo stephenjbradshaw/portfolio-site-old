@@ -16,7 +16,7 @@ export default function About({ data }) {
         />
         <h2>What am I doing now?</h2>
         <p>
-          I've recently graduated from Northoders' coding bootcamp. You can
+          I've recently graduated from Northcoders' coding bootcamp. You can
           check out my final project{" "}
           <a
             href="https://github.com/davidjohn290/hive-got-bugs-fe"
