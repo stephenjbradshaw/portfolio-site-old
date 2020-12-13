@@ -16,24 +16,19 @@ export default function About({ data }) {
         />
         <h2>What am I doing now?</h2>
         <p>
-          I've recently graduated from Northcoders' coding bootcamp. You can
-          check out my final project{" "}
+          I'm currently a Junior Developer at{" "}
           <a
-            href="https://github.com/davidjohn290/hive-got-bugs-fe"
+            href="https://buildempire.co.uk/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            here
-          </a>
-          , which was built in two weeks as part of a fully-remote four-person
-          team.
+            BuildEmpire
+          </a>{" "}
+          in Manchester. I'm really excited to be continuing my dev journey as
+          part of the team there, and I'm enjoying the challenge of using some
+          unfamiliar technologies as part of an exciting full-stack project.
         </p>
-        <p>
-          Since then I've been looking for my first tech role while also
-          continuing to learn new skills – I've been getting to grips with
-          Gatsby and GraphQL (by building this website!), and next up I'm hoping to
-          get stuck in with TypeScript.{" "}
-        </p>
+
         <h2>Tech Stack</h2>
         <ul>
           <li>
@@ -47,15 +42,18 @@ export default function About({ data }) {
             </a>{" "}
           </li>
           <li>
-            <strong>Front end: </strong>React, Gatsby, GraphQL, Styled
-            Components, HTML5, CSS3, SCSS
+            <strong>Frameworks: </strong> React, AWS Amplify, Gatsby
+          </li>
+          <li>
+            <strong>Front end: </strong>GraphQL, Styled Components, HTML5, CSS3,
+            SCSS
           </li>
           <li>
             <strong>Back end: </strong>RESTful APIs using Node.js, Express,
-            Knex.js, PostgreSQL
+            PostgreSQL
           </li>
           <li>
-            <strong>Testing: </strong>Jest, Supertest
+            <strong>Testing: </strong>Jest, React Testing Library
           </li>
           <li>
             <strong>Other: </strong> Adobe CC, Figma, Arduino & basic
@@ -65,8 +63,16 @@ export default function About({ data }) {
         <h2>What's my background?</h2>
         <p>
           I have a masters degree in music composition, and before retraining as
-          a developer I was pursuing a portfolio career in the arts. My artistic
-          practice is tech-heavy, often involving creating{" "}
+          a developer at{" "}
+          <a
+            href="https://northcoders.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Northcoders
+          </a>{" "}
+          I was pursuing a portfolio career in the arts. My artistic practice is
+          tech-heavy, often involving creating{" "}
           <strong> new software instruments</strong> and{" "}
           <strong>custom hardware</strong>. I found that I really enjoyed this
           aspect of my work, and when Covid hit I decided to pivot and develop
@@ -81,8 +87,7 @@ export default function About({ data }) {
           <strong>ability to break down problems</strong>.
         </p>
         <p>
-          I'm really excited to see where my new career takes me, and I'm
-          currently looking for my first dev role. If you think we should chat,{" "}
+          If you'd like to chat, feel free to{" "}
           <a href="/contact">get in touch!</a>
         </p>
         <ul>
