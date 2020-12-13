@@ -10,22 +10,22 @@ export default function IndexPage({ data }) {
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <Wrapper>
         <StyledTitle>Hello! I'm Stephen</StyledTitle>
-        <StyledTagline>I'm a full-stack developer from Manchester</StyledTagline>
+        <StyledTagline>I'm a Junior Developer from Manchester</StyledTagline>
         <StyledImg
           fluid={data.file.childImageSharp.fluid}
           alt="Stephen Bradshaw"
         />
         <p>
-          I love learning new technologies and being creative, and I recently
-          graduated from{" "}
+          I love learning new technologies and being creative, and I've recently
+          started in my first dev role at the wonderful{" "}
           <a
-            href="https://www.northcoders.com"
+            href="https://buildempire.co.uk/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Northcoders
-          </a>{" "}
-          coding bootcamp.
+            BuildEmpire
+          </a>
+          !
         </p>
         <p>
           Outside of coding, I have a passion for making experimental music and
