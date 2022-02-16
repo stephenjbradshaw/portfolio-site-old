@@ -16,20 +16,32 @@ export default function About({ data }) {
         />
         <h2>What am I doing now?</h2>
         <p>
-          I'm currently a Junior Developer at{" "}
+          I'm a developer at{" "}
           <a
-            href="https://buildempire.co.uk/"
+            href="https://thirst.io/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            BuildEmpire
+            thirst.io
           </a>{" "}
-          in Manchester. I'm really excited to be continuing my dev journey as
-          part of the team there, and I'm enjoying the challenge of using some
-          unfamiliar technologies as part of an exciting full-stack project.
+          in Manchester. I'm part of a team of JavaScript developers building
+          thirst, a modern social, learning platform, built around an AI-based
+          recommendation engine. I enjoy working both on our back end (AWS) and
+          front end (React), but I'm particularly passionate about UX and web
+          accessibility – helping to make thirst intuitive and easy-to-use for
+          all.
         </p>
 
-        <h2>Tech Stack</h2>
+        <h2>What's my background?</h2>
+        <p>
+          I have a masters degree in music <strong>composition</strong>. My
+          composition practice is tech-heavy, often involving creating new{" "}
+          digital musical instruments and{" "}
+          <strong>interactive installations</strong>. I regularly perform as a{" "}
+          <strong>violinist</strong> and I have also been a producer / project
+          manager for arts events.
+        </p>
+        <h2>Tech</h2>
         <ul>
           <li>
             <strong>Languages: </strong>JavaScript, Python,{" "}
@@ -41,51 +53,18 @@ export default function About({ data }) {
               Max/MSP
             </a>{" "}
           </li>
+
           <li>
-            <strong>Frameworks: </strong> React, AWS Amplify, Gatsby
+            <strong>Front end: </strong>React, Gatsby, GraphQL
           </li>
           <li>
-            <strong>Front end: </strong>GraphQL, Styled Components, HTML5, CSS3,
-            SCSS
-          </li>
-          <li>
-            <strong>Back end: </strong>RESTful APIs using Node.js, Express,
-            PostgreSQL
+            <strong>Back end: </strong>Amazon Web Services (AWS), Node.js,
+            express
           </li>
           <li>
             <strong>Testing: </strong>Jest, React Testing Library
           </li>
-          <li>
-            <strong>Other: </strong> Adobe CC, Figma, Arduino & basic
-            electronics
-          </li>
         </ul>
-        <h2>What's my background?</h2>
-        <p>
-          I have a masters degree in music composition, and before retraining as
-          a developer at{" "}
-          <a
-            href="https://northcoders.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Northcoders
-          </a>{" "}
-          I was pursuing a portfolio career in the arts. My artistic practice is
-          tech-heavy, often involving creating{" "}
-          <strong> new software instruments</strong> and{" "}
-          <strong>custom hardware</strong>. I found that I really enjoyed this
-          aspect of my work, and when Covid hit I decided to pivot and develop
-          my tech skills full-time.
-        </p>
-        <p>
-          I also have professional experience as a{" "}
-          <strong>producer & project manager</strong> for arts events, and as a{" "}
-          <strong>violin tutor</strong> – experiences that have provided me with
-          transferable skills in <strong>organisation</strong>,{" "}
-          <strong>communication</strong>, and the{" "}
-          <strong>ability to break down problems</strong>.
-        </p>
         <p>
           If you'd like to chat, feel free to{" "}
           <a href="/contact">get in touch!</a>

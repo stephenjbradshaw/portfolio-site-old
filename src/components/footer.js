@@ -28,17 +28,7 @@ export default function Footer({ className }) {
               </a>
             </section>
             <p>
-              © Built with ♥ by Stephen Bradshaw, {new Date().getFullYear()}
-            </p>
-            <p>
-              Source code on{" "}
-              <a
-                href="https://github.com/stephenjbradshaw/portfolio-site"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Github
-              </a>
+              © Stephen Bradshaw, {new Date().getFullYear()}
             </p>
           </footer>
         )

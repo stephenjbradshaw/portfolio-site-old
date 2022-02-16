@@ -10,33 +10,18 @@ export default function IndexPage({ data }) {
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <Wrapper>
         <StyledTitle>Hello! I'm Stephen</StyledTitle>
-        <StyledTagline>I'm a Junior Developer from Manchester</StyledTagline>
+        <StyledTagline>I'm a developer at <a
+            href="https://thirst.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            thirst.io
+          </a>, a creative coder, and a musician</StyledTagline>
+    
         <StyledImg
           fluid={data.file.childImageSharp.fluid}
           alt="Stephen Bradshaw"
         />
-        <p>
-          I love learning new technologies and being creative, and I've recently
-          started in my first dev role at the wonderful{" "}
-          <a
-            href="https://buildempire.co.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            BuildEmpire
-          </a>
-          !
-        </p>
-        <p>
-          Outside of coding, I have a passion for making experimental music and
-          art, and I enjoy cycle-touring and kayaking.{" "}
-          <span role="img" aria-label="bicycle emoji">
-            🚲
-          </span>{" "}
-          <span role="img" aria-label="canoe emoji">
-            🛶
-          </span>{" "}
-        </p>
         <p>
           This site is a space to showcase my coding projects and to write about
           tech topics that I'm learning about. If you have any questions,{" "}
